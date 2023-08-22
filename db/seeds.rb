@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require 'faker'
+
+30.times do |i|
+  Article.create(title: Faker::Movies::Avatar.quote, description: Faker::Lorem.sentence(word_count: 20, supplemental: true), content: Faker::Lorem.sentence(word_count: 100, supplemental: true))
+end
